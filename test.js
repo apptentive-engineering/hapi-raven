@@ -40,7 +40,7 @@ test('request-error', function (t) {
             t.ok(data.extra)
             t.equal(typeof data.extra.timestamp, 'number')
             t.equal(typeof data.extra.id, 'string')
-            t.equal(data.extra.method, 'get')
+            t.equal(data.request.method, 'get')
             t.equal(data.extra.path, '/')
             t.deepEqual(data.extra.query, {})
             t.equal(data.extra.remoteAddress, hapiVersion === 8 ? '' : '127.0.0.1')
